@@ -1,8 +1,8 @@
-import React from "react";
-import { v4 as uuidv4 } from "uuid";
-import TodoList from "./TodosList";
-import Header from "./Header";
-import InputTodo from "./InputTodo";
+import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import TodoList from './TodosList';
+import Header from './Header';
+import InputTodo from './InputTodo';
 
 class TodoContainer extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class TodoContainer extends React.Component {
   }
 
   componentDidMount() {
-    const loadedTodos = JSON.parse(localStorage.getItem("todos"));
+    const loadedTodos = JSON.parse(localStorage.getItem('todos'));
     if (loadedTodos) {
       this.setState({
         todos: loadedTodos,
@@ -24,7 +24,7 @@ class TodoContainer extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     const { todos } = this.state;
     if (prevState.todos !== todos) {
-      localStorage.setItem("todos", JSON.stringify(todos));
+      localStorage.setItem('todos', JSON.stringify(todos));
     }
   }
 
@@ -67,8 +67,8 @@ class TodoContainer extends React.Component {
   render() {
     const { todos } = this.state;
     return (
-      <div className="container">
-        <div className="inner">
+      <div className='container'>
+        <div className='inner'>
           <Header />
           <InputTodo addItem={this.addItem} />
           <ul>

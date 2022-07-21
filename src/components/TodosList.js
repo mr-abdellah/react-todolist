@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import TodoItem from "./TodoItem";
+import React from 'react';
+import PropTypes from 'prop-types';
+import TodoItem from './TodoItem';
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -9,7 +9,9 @@ class TodoList extends React.Component {
   }
 
   render() {
-    const { todos, handleChange, deleteItem, handleEdit } = this.props;
+    const {
+      todos, handleChange, deleteItem, handleEdit
+    } = this.props;
     return (
       <ul>
         {todos.map((todo) => (
