@@ -10,7 +10,7 @@ class TodoList extends React.Component {
 
   render() {
     const {
-      todos, handleChange, deleteItem, handleEdit
+      todos, handleChange, deleteItem, handleEdit,
     } = this.props;
     return (
       <ul>
