@@ -22,9 +22,8 @@ class TodoItem extends React.Component {
 
   render() {
     const {
-      id, title, completed, handleChange, deleteItem, handleEdit
-    }=
-      this.props;
+      id, title, completed, handleChange, deleteItem, handleEdit,
+    } = this.props;
 
     const { editing } = this.state;
 
@@ -48,18 +47,18 @@ class TodoItem extends React.Component {
       <li className={styles.item}>
         <div onDoubleClick={this.editItem} style={viewMode}>
           <input
-            type='checkbox'
+            type="checkbox"
             className={styles.checkbox}
             checked={completed}
             onChange={() => handleChange(id)}
           />
           <span style={completed ? completedStyle : null}>{title}</span>
-          <button type='button' onClick={() => deleteItem(id)}>
+          <button type="button" onClick={() => deleteItem(id)}>
             Delete
           </button>
         </div>
         <input
-          type='text'
+          type="text"
           style={editMode}
           className={styles.textInput}
           value={title}

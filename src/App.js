@@ -11,9 +11,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path='/react-todolist' element={<TodoContainer />} />
-          <Route path='/about' element={<About />} />
-          <Route path='*' element={<NoMatch />} />
+          <Route path="/react-todolist" element={<TodoContainer />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NoMatch />} />
         </Routes>
       </BrowserRouter>
     </>

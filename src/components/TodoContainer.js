@@ -67,8 +67,8 @@ class TodoContainer extends React.Component {
   render() {
     const { todos } = this.state;
     return (
-      <div className='container'>
-        <div className='inner'>
+      <div className="container">
+        <div className="inner">
           <Header />
           <InputTodo addItem={this.addItem} />
           <ul>
