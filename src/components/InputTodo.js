@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 class InputTodo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
+      title: "",
     };
   }
 
@@ -13,7 +13,7 @@ class InputTodo extends React.Component {
     this.setState({
       [event.target.name]: event.target.value,
     });
-  }
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -21,9 +21,9 @@ class InputTodo extends React.Component {
     const { addItem } = this.props;
     if (title.trim()) {
       addItem(title);
-      this.setState({ title: '' });
+      this.setState({ title: "" });
     }
-  }
+  };
 
   render() {
     const { title } = this.state;
@@ -37,7 +37,11 @@ class InputTodo extends React.Component {
           value={title}
           onChange={this.handleInput}
         />
-        <input type="submit" className="input-submit" onClick={() => this.handleSubmit} />
+        <input
+          type="submit"
+          className="input-submit"
+          onClick={() => this.handleSubmit}
+        />
       </form>
     );
   }

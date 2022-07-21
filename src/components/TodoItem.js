@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './TodoItem.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./TodoItem.module.css";
 
 class TodoItem extends React.Component {
   constructor(props) {
@@ -12,18 +12,17 @@ class TodoItem extends React.Component {
 
   editItem = () => {
     this.setState({ editing: true });
-  }
+  };
 
   handleEditDone = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       this.setState({ editing: false });
     }
-  }
+  };
 
   render() {
-    const {
-      id, title, completed, handleChange, deleteItem, handleEdit,
-    } = this.props;
+    const { id, title, completed, handleChange, deleteItem, handleEdit } =
+      this.props;
 
     const { editing } = this.state;
 
@@ -31,16 +30,16 @@ class TodoItem extends React.Component {
     const editMode = {};
 
     if (editing) {
-      viewMode.display = 'none';
+      viewMode.display = "none";
     } else {
-      editMode.display = 'none';
+      editMode.display = "none";
     }
 
     const completedStyle = {
-      fontStyle: 'italic',
-      color: '#595959',
+      fontStyle: "italic",
+      color: "#595959",
       opacity: 0.4,
-      textDecoration: 'line-through',
+      textDecoration: "line-through",
     };
 
     return (
@@ -52,10 +51,10 @@ class TodoItem extends React.Component {
             checked={completed}
             onChange={() => handleChange(id)}
           />
-          <span style={completed ? completedStyle : null}>
-            {title}
-          </span>
-          <button type="button" onClick={() => deleteItem(id)}>Delete</button>
+          <span style={completed ? completedStyle : null}>{title}</span>
+          <button type="button" onClick={() => deleteItem(id)}>
+            Delete
+          </button>
         </div>
         <input
           type="text"
